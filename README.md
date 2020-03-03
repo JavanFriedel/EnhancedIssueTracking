@@ -16,11 +16,10 @@ Over the next few days I will be starting with a clean slate. Researching, desig
 As a whole, to gaurantee success I will be following a design process and workflow based on quick and iterative changes. This pathway will be as follows;
 
  - [x] Set up project files, and find clear guidelines for the problem.
- - [ ] Research and document personal take away's and public opinions online.
- - [ ] Sketch / Mockup concept ideas.
- - [ ] Digital Mockup in Illustrator (Also provides DOM overview)
- - [ ] Test UI and Interactives in Adobe XD
- - [ ] Create Code Overview Based on Findings
+ - [x] Research and document personal take away's and public opinions online.
+ - [x] Sketch / Mockup concept ideas.
+ - [x] Digital Mockup in Illustrator (Also provides DOM overview)
+ - [x] Create Code Overview Based on Findings
  - [ ] Code Sprints (Code, Test, Review, Repeat)
  - [ ] Review Documents for Legibility and Standards
  - [ ] Complete / Launch
