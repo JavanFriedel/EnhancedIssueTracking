@@ -10,6 +10,9 @@
 
 <body>
     <div class="wrapper">
+
+        <!----------------------- Summary  ---------------------------->
+
         <div class="section">
             <div class="section">
                 <h1>Summary</h1>
@@ -95,28 +98,134 @@
                     </div>
                 </div>
             </div>
-
         </div>
+
+        <!----------------------- Pinned Issues ---------------------------->
+
         <div class="section">
             <h1>Pinned Issues</h1>
             <p class="hideTag">Hide</p>
             <div id="pinnedCards">
                 <div class="card">
-                    <div class="cardTitle"><p>How to turn off computer?</p></div>
-                    <div class="cardSubTitle"><p>#1 by Bob on Jan 7</p></div>
-                    <div class="cardStatus"><img src="Icons/StatusClosed.svg" alt="Status Closed" /> <p>Closed</p> <img src="Icons/CommentBox.svg" alt="Status Closed" /><p>1</p><img src="Icons/UpArrow.svg" alt="Status Closed" /><p>1100</p></div>
+                    <div class="cardTitle">
+                        <p>How to turn off computer?</p>
+                    </div>
+                    <div class="cardSubTitle">
+                        <p>#1 by Bob on Jan 7</p>
+                    </div>
+                    <div class="cardStatus"><img src="Icons/StatusClosed.svg" alt="Status Closed" />
+                        <p>Closed</p> <img src="Icons/CommentBox.svg" alt="Status Closed" />
+                        <p>1</p><img src="Icons/UpArrow.svg" alt="Status Closed" />
+                        <p>1100</p>
+                    </div>
                 </div>
                 <div class="card">
-                    <div class="cardTitle"><p>Google integration exports data</p></div>
-                    <div class="cardSubTitle"><p>#72 by TinFoilHat on Fed 1</p></div>
-                    <div class="cardStatus"><img src="Icons/StatusClosed.svg" alt="Status Closed" /> <p>Closed</p> <img src="Icons/CommentBox.svg" alt="Status Closed" /><p>9</p><img src="Icons/UpArrow.svg" alt="Status Closed" /><p>99</p></div>
+                    <div class="cardTitle">
+                        <p>Google integration exports data</p>
+                    </div>
+                    <div class="cardSubTitle">
+                        <p>#72 by TinFoilHat on Feb 1</p>
+                    </div>
+                    <div class="cardStatus"><img src="Icons/StatusClosed.svg" alt="Status Closed" />
+                        <p>Closed</p> <img src="Icons/CommentBox.svg" alt="Status Closed" />
+                        <p>9</p><img src="Icons/UpArrow.svg" alt="Status Closed" />
+                        <p>99</p>
+                    </div>
                 </div>
                 <div class="card">
-                    <div class="cardTitle"><p>Space in code effecting render in EI 6 <span class="tagCSS">CSS</span></p></div>
-                    <div class="cardSubTitle"><p>#1 by Bob on Jan 7</p></div>
-                    <div class="cardStatus"><img src="Icons/StatusOpen.svg" alt="Status Closed" /> <p>Closed</p> <img src="Icons/CommentBox.svg" alt="Status Closed" /><p>2</p><img src="Icons/UpArrow.svg" alt="Status Closed" /><p>1200</p></div>
+                    <div class="cardTitle">
+                        <p>Space in code effecting render in EI 6 <span class="tagCSS">CSS</span></p>
+                    </div>
+                    <div class="cardSubTitle">
+                        <p>#1 by Bob on Jan 7</p>
+                    </div>
+                    <div class="cardStatus"><img src="Icons/StatusOpen.svg" alt="Status Closed" />
+                        <p>Closed</p> <img src="Icons/CommentBox.svg" alt="Status Closed" />
+                        <p>2</p><img src="Icons/UpArrow.svg" alt="Status Closed" />
+                        <p>1200</p>
+                    </div>
                 </div>
             </div>
+        </div>
+
+        <!----------------------- Main Issues List  ---------------------------->
+
+        <div class="section">
+            <div class="listNav">
+                <div class="search">
+                    <div class="filter">
+                        <p>Filters</p><img src="Icons/DropArrow.svg" alt="drop arrow" />
+                    </div>
+                    <div class="searchBar">
+                        <form>
+                            <input type="text" id="searchQ" name="searchQ" value="is:issue is:open">
+                            <div id="cancel">
+                                <p>X</p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="statusToggle">
+                    <div class="statusOpen">
+                        <img src="Icons/StatusOpenBlack.svg" alt="Status Open" />
+                        <p>Open</p><span>1,186</span>
+                    </div>
+                    <div class="statusClosed">
+                        <img src="Icons/Closed.svg" alt="Status Closed" />
+                        <p>Closed</p><span>3,186</span>
+                    </div>
+                </div>
+                <div class="newIssue">
+                    <div class="newIssueBlank">
+                        <p>New Issue</p>
+                    </div>
+                    <div class="newIssueTemplate"><img src="Icons/DropdownWhite.svg" alt="Dropdown" /></div>
+                </div>
+
+            </div>
+        </div>
+        <div class="section">
+            <div class="listBox">
+                <div class="listHeader">
+                    <div id="listStart">
+                        <div id="authorSort">
+                            <p>Author</p>
+                            <img src="Icons/DropArrow.svg" alt="drop arrow" />
+                        </div>
+                        <div id="labelSort">
+                            <p>Label</p>
+                            <img src="Icons/DropArrow.svg" alt="drop arrow" />
+                        </div>
+                    </div>
+                    <div id="listEnd">
+                        <div id="assigneeSort">
+                            <p>Assignee</p>
+                            <img src="Icons/DropArrow.svg" alt="drop arrow" />
+                        </div>
+                        <div id="mainSort">
+                            <p>Sort</p>
+                            <img src="Icons/DropArrow.svg" alt="drop arrow" />
+                        </div>
+                    </div>
+                </div>
+                <div class="listEntry">
+                    <div class="status">
+                        <img src="Icons/StatusOpen.svg" alt="Status-Open" />
+                    </div>
+                    <div class="eTitle">
+                        <div class="mainTitle">
+                            <p>This is an example of an issue title, vertical split between this and the sub-title...<span class="tagBug">bug</span></p>
+                        </div>
+                        <div class="subTitle">
+                            <p>#224 opened 6 hours ago by ElonMusk</p>
+                        </div>
+                    </div>
+                    <div class="listComments"><img src="Icons/UpArrow.svg" alt="Up Arrow" />
+                        <p>890</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </body></html>
