@@ -8,47 +8,47 @@
 
 </head>
 
-<body>
+<body class="pmClear">
     <div class="wrapper">
 
         <!----------------------- Summary  ---------------------------->
 
-        <div class="section">
-            <div class="section">
-                <h1>Summary</h1>
-                <p class="hideTag">Hide</p>
-                <div class="listBox">
-                    <div id="sumHeader">
-                        <div>
-                            <form action="/action_page.php" class="title">
-                                <label for="assigned">Assigned: </label>
-                                <select id="assigned" name="assigned">
-                                    <option value="Javan">Javan Friedel</option>
-                                    <option value="Graham">Graham Kennery</option>
-                                    <option value="Elon">Elon Musk</option>
-                                    <option value="Mark">Mark Zuckerberg</option>
-                                </select></form>
-                        </div>
-                        <div>
-                            <div class="sortContain">
-                                <span class="title">Sort:</span>
-                                <p class="title" id="likes">Likes</p>
-                                <p class="title" id="recent">Recent</p>
-                                <p class="title" id="comments">Comments</p>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="rangeContain">
-                                <span class="title">Range:</span>
-                                <p class="title" id="day">1D</p>
-                                <p class="title" id="week">1W</p>
-                                <p class="title" id="month">1M</p>
-                                <p class="title" id="year">1Y</p>
-                                <p class="title" id="all">ALL</p>
-                            </div>
+        <div class="section" id="summary">
+            <h1>Summary</h1>
+            <p class="hideTag">Hide</p>
+            <div class="listBox">
+                <div id="sumHeader">
+                    <div>
+                        <form action="/action_page.php" class="title">
+                            <label for="assigned">Assigned: </label>
+                            <select id="assigned" name="assigned">
+                                <option value="Javan">Javan Friedel</option>
+                                <option value="Graham">Graham Kennery</option>
+                                <option value="Elon">Elon Musk</option>
+                                <option value="Mark">Mark Zuckerberg</option>
+                            </select></form>
+                    </div>
+                    <div>
+                        <div id="sortContain" class="flex-centre">
+                            <span class="title">Sort:</span>
+                            <p class="title" id="likes">Likes</p>
+                            <p class="title" id="recent">Recent</p>
+                            <p class="title" id="comments">Comments</p>
                         </div>
                     </div>
-                    <div class="SlistEntry">
+                    <div>
+                        <div class="rangeContain">
+                            <span class="title">Range:</span>
+                            <p class="title" id="day">1D</p>
+                            <p class="title" id="week">1W</p>
+                            <p class="title" id="month">1M</p>
+                            <p class="title" id="year">1Y</p>
+                            <p class="title" id="all">ALL</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="SlistEntry">
+                    <div class="entryStart">
                         <div class="status">
                             <img src="Icons/StatusOpen.svg" alt="Status-Open" />
                         </div>
@@ -60,11 +60,16 @@
                                 <p>#224 opened 6 hours ago by ElonMusk</p>
                             </div>
                         </div>
+                    </div>
+                    <div class="entryEnd">
                         <div class="sUpvotes"><img src="Icons/UpArrow.svg" alt="Up Arrow" />
                             <p>890</p>
                         </div>
                     </div>
-                    <div class="SlistEntry">
+                </div>
+
+                <div class="SlistEntry">
+                    <div class="entryStart">
                         <div class="status">
                             <img src="Icons/StatusOpen.svg" alt="Status-Open" />
                         </div>
@@ -76,11 +81,15 @@
                                 <p>#204 opened 5 days ago by MarkZucker</p>
                             </div>
                         </div>
+                    </div>
+                    <div class="entryEnd">
                         <div class="sUpvotes"><img src="Icons/UpArrow.svg" alt="Up Arrow" />
                             <p>202</p>
                         </div>
                     </div>
-                    <div class="SlistEntry">
+                </div>
+                <div class="SlistEntry">
+                    <div class="entryStart">
                         <div class="status">
                             <img src="Icons/StatusOpen.svg" alt="Status-Open" />
                         </div>
@@ -92,6 +101,8 @@
                                 <p>#192 opened 6 days ago by ClicheClient</p>
                             </div>
                         </div>
+                    </div>
+                    <div class="entryEnd">
                         <div class="sUpvotes"><img src="Icons/UpArrow.svg" alt="Up Arrow" />
                             <p>198</p>
                         </div>
@@ -102,7 +113,7 @@
 
         <!----------------------- Pinned Issues ---------------------------->
 
-        <div class="section">
+        <div class="section" id="pinnedIssues">
             <h1>Pinned Issues</h1>
             <p class="hideTag">Hide</p>
             <div id="pinnedCards">
@@ -148,16 +159,16 @@
             </div>
         </div>
 
-        <!----------------------- Main Issues List  ---------------------------->
+        <!----------------------- Main Issues List Nav ---------------------------->
 
-        <div class="section">
+        <div class="section" id="issuesList">
             <div class="listNav">
                 <div class="search">
                     <div class="filter">
                         <p>Filters</p><img src="Icons/DropArrow.svg" alt="drop arrow" />
                     </div>
                     <div class="searchBar">
-                        <form>
+                        <form class="pmClear">
                             <input type="text" id="searchQ" name="searchQ" value="is:issue is:open">
                             <div id="cancel">
                                 <p>X</p>
@@ -184,31 +195,34 @@
 
             </div>
         </div>
-        <div class="section">
-            <div class="listBox">
-                <div class="listHeader">
-                    <div id="listStart">
-                        <div id="authorSort">
-                            <p>Author</p>
-                            <img src="Icons/DropArrow.svg" alt="drop arrow" />
-                        </div>
-                        <div id="labelSort">
-                            <p>Label</p>
-                            <img src="Icons/DropArrow.svg" alt="drop arrow" />
-                        </div>
+
+        <!----------------------- Main Issues List  ---------------------------->
+
+        <div class="listBox">
+            <div class="listHeader">
+                <div id="listStart">
+                    <div id="authorSort">
+                        <p>Author</p>
+                        <img src="Icons/DropArrow.svg" alt="drop arrow" />
                     </div>
-                    <div id="listEnd">
-                        <div id="assigneeSort">
-                            <p>Assignee</p>
-                            <img src="Icons/DropArrow.svg" alt="drop arrow" />
-                        </div>
-                        <div id="mainSort">
-                            <p>Sort</p>
-                            <img src="Icons/DropArrow.svg" alt="drop arrow" />
-                        </div>
+                    <div id="labelSort">
+                        <p>Label</p>
+                        <img src="Icons/DropArrow.svg" alt="drop arrow" />
                     </div>
                 </div>
-                <div class="listEntry">
+                <div id="listEnd">
+                    <div id="assigneeSort">
+                        <p>Assignee</p>
+                        <img src="Icons/DropArrow.svg" alt="drop arrow" />
+                    </div>
+                    <div id="mainSort">
+                        <p>Sort</p>
+                        <img src="Icons/DropArrow.svg" alt="drop arrow" />
+                    </div>
+                </div>
+            </div>
+            <div class="listEntry">
+                <div class="entryStart">
                     <div class="status">
                         <img src="Icons/StatusOpen.svg" alt="Status-Open" />
                     </div>
@@ -220,12 +234,343 @@
                             <p>#224 opened 6 hours ago by ElonMusk</p>
                         </div>
                     </div>
-                    <div class="listComments"><img src="Icons/UpArrow.svg" alt="Up Arrow" />
-                        <p>890</p>
+                </div>
+                <div class="entryEnd">
+                    <div class="Column">
+                        <div class="listAssignee"><img src="https://picsum.photos/25?random=1" alt="Up Arrow" />
+                        </div>
+                    </div>
+                    <div class="sortColumn">
+                        <div class="listComments"><img src="Icons/CommentBox.svg" alt="Up Arrow" />
+                            <p>2</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="listEntry">
+                <div class="entryStart">
+                    <div class="status">
+                        <img src="Icons/StatusOpen.svg" alt="Status-Open" />
+                    </div>
+                    <div class="eTitle">
+                        <div class="mainTitle">
+                            <p>This is an example of an issue title, vertical split between this and the sub-title...<span class="tagBug">bug</span></p>
+                        </div>
+                        <div class="subTitle">
+                            <p>#224 opened 6 hours ago by ElonMusk</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="entryEnd">
+                    <div class="Column">
+                        <div class="listAssignee"><img src="https://picsum.photos/25?random=0" alt="Up Arrow" />
+                        </div>
+                    </div>
+                    <div class="sortColumn">
+                        <div class="listComments"><img src="Icons/CommentBox.svg" alt="Up Arrow" />
+                            <p>2</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="listEntry">
+                <div class="entryStart">
+                    <div class="status">
+                        <img src="Icons/StatusOpen.svg" alt="Status-Open" />
+                    </div>
+                    <div class="eTitle">
+                        <div class="mainTitle">
+                            <p>This is an example of an issue title, vertical split between this and the sub-title...<span class="tagBug">bug</span></p>
+                        </div>
+                        <div class="subTitle">
+                            <p>#224 opened 6 hours ago by ElonMusk</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="entryEnd">
+                    <div class="Column">
+                        <div class="listAssignee"><img src="https://picsum.photos/25?random=2" alt="Up Arrow" />
+                        </div>
+                    </div>
+                    <div class="sortColumn">
+                        <div class="listComments"><img src="Icons/CommentBox.svg" alt="Up Arrow" />
+                            <p>2</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="listEntry">
+                <div class="entryStart">
+                    <div class="status">
+                        <img src="Icons/StatusOpen.svg" alt="Status-Open" />
+                    </div>
+                    <div class="eTitle">
+                        <div class="mainTitle">
+                            <p>This is an example of an issue title, vertical split between this and the sub-title...<span class="tagBug">bug</span></p>
+                        </div>
+                        <div class="subTitle">
+                            <p>#224 opened 6 hours ago by ElonMusk</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="entryEnd">
+                    <div class="Column">
+                        <div class="listAssignee"><img src="https://picsum.photos/25?random=3" alt="Up Arrow" />
+                        </div>
+                    </div>
+                    <div class="sortColumn">
+                        <div class="listComments"><img src="Icons/CommentBox.svg" alt="Up Arrow" />
+                            <p>2</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="listEntry">
+                <div class="entryStart">
+                    <div class="status">
+                        <img src="Icons/StatusOpen.svg" alt="Status-Open" />
+                    </div>
+                    <div class="eTitle">
+                        <div class="mainTitle">
+                            <p>This is an example of an issue title, vertical split between this and the sub-title...<span class="tagBug">bug</span></p>
+                        </div>
+                        <div class="subTitle">
+                            <p>#224 opened 6 hours ago by ElonMusk</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="entryEnd">
+                    <div class="Column">
+                        <div class="listAssignee"><img src="https://picsum.photos/25?random=4" alt="Up Arrow" />
+                        </div>
+                    </div>
+                    <div class="sortColumn">
+                        <div class="listComments"><img src="Icons/CommentBox.svg" alt="Up Arrow" />
+                            <p>2</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="listEntry">
+                <div class="entryStart">
+                    <div class="status">
+                        <img src="Icons/StatusOpen.svg" alt="Status-Open" />
+                    </div>
+                    <div class="eTitle">
+                        <div class="mainTitle">
+                            <p>This is an example of an issue title, vertical split between this and the sub-title...<span class="tagBug">bug</span></p>
+                        </div>
+                        <div class="subTitle">
+                            <p>#224 opened 6 hours ago by ElonMusk</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="entryEnd">
+                    <div class="Column">
+                        <div class="listAssignee"><img src="https://picsum.photos/25?random=5" alt="Up Arrow" />
+                        </div>
+                    </div>
+                    <div class="sortColumn">
+                        <div class="listComments"><img src="Icons/CommentBox.svg" alt="Up Arrow" />
+                            <p>2</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="listEntry">
+                <div class="entryStart">
+                    <div class="status">
+                        <img src="Icons/StatusOpen.svg" alt="Status-Open" />
+                    </div>
+                    <div class="eTitle">
+                        <div class="mainTitle">
+                            <p>This is an example of an issue title, vertical split between this and the sub-title...<span class="tagBug">bug</span></p>
+                        </div>
+                        <div class="subTitle">
+                            <p>#224 opened 6 hours ago by ElonMusk</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="entryEnd">
+                    <div class="Column">
+                        <div class="listAssignee"><img src="https://picsum.photos/25?random=6" alt="Up Arrow" />
+                        </div>
+                    </div>
+                    <div class="sortColumn">
+                        <div class="listComments"><img src="Icons/CommentBox.svg" alt="Up Arrow" />
+                            <p>2</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="listEntry">
+                <div class="entryStart">
+                    <div class="status">
+                        <img src="Icons/StatusOpen.svg" alt="Status-Open" />
+                    </div>
+                    <div class="eTitle">
+                        <div class="mainTitle">
+                            <p>This is an example of an issue title, vertical split between this and the sub-title...<span class="tagBug">bug</span></p>
+                        </div>
+                        <div class="subTitle">
+                            <p>#224 opened 6 hours ago by ElonMusk</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="entryEnd">
+                    <div class="Column">
+                        <div class="listAssignee"><img src="https://picsum.photos/25?random=7" alt="Up Arrow" />
+                        </div>
+                    </div>
+                    <div class="sortColumn">
+                        <div class="listComments"><img src="Icons/CommentBox.svg" alt="Up Arrow" />
+                            <p>2</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="listEntry">
+                <div class="entryStart">
+                    <div class="status">
+                        <img src="Icons/StatusOpen.svg" alt="Status-Open" />
+                    </div>
+                    <div class="eTitle">
+                        <div class="mainTitle">
+                            <p>This is an example of an issue title, vertical split between this and the sub-title...<span class="tagBug">bug</span></p>
+                        </div>
+                        <div class="subTitle">
+                            <p>#224 opened 6 hours ago by ElonMusk</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="entryEnd">
+                    <div class="Column">
+                        <div class="listAssignee"><img src="https://picsum.photos/25?random=8" alt="Up Arrow" />
+                        </div>
+                    </div>
+                    <div class="sortColumn">
+                        <div class="listComments"><img src="Icons/CommentBox.svg" alt="Up Arrow" />
+                            <p>2</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="listEntry">
+                <div class="entryStart">
+                    <div class="status">
+                        <img src="Icons/StatusOpen.svg" alt="Status-Open" />
+                    </div>
+                    <div class="eTitle">
+                        <div class="mainTitle">
+                            <p>This is an example of an issue title, vertical split between this and the sub-title...<span class="tagBug">bug</span></p>
+                        </div>
+                        <div class="subTitle">
+                            <p>#224 opened 6 hours ago by ElonMusk</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="entryEnd">
+                    <div class="Column">
+                        <div class="listAssignee"><img src="https://picsum.photos/25?random=9" alt="Up Arrow" />
+                        </div>
+                    </div>
+                    <div class="sortColumn">
+                        <div class="listComments"><img src="Icons/CommentBox.svg" alt="Up Arrow" />
+                            <p>2</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="listEntry">
+                <div class="entryStart">
+                    <div class="status">
+                        <img src="Icons/StatusOpen.svg" alt="Status-Open" />
+                    </div>
+                    <div class="eTitle">
+                        <div class="mainTitle">
+                            <p>This is an example of an issue title, vertical split between this and the sub-title...<span class="tagBug">bug</span></p>
+                        </div>
+                        <div class="subTitle">
+                            <p>#224 opened 6 hours ago by ElonMusk</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="entryEnd">
+                    <div class="Column">
+                        <div class="listAssignee"><img src="https://picsum.photos/25?random=10" alt="Up Arrow" />
+                        </div>
+                    </div>
+                    <div class="sortColumn">
+                        <div class="listComments"><img src="Icons/CommentBox.svg" alt="Up Arrow" />
+                            <p>2</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="listEntry">
+                <div class="entryStart">
+                    <div class="status">
+                        <img src="Icons/StatusOpen.svg" alt="Status-Open" />
+                    </div>
+                    <div class="eTitle">
+                        <div class="mainTitle">
+                            <p>This is an example of an issue title, vertical split between this and the sub-title...<span class="tagBug">bug</span></p>
+                        </div>
+                        <div class="subTitle">
+                            <p>#224 opened 6 hours ago by ElonMusk</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="entryEnd">
+                    <div class="Column">
+                        <div class="listAssignee"><img src="https://picsum.photos/25?random=11" alt="Up Arrow" />
+                        </div>
+                    </div>
+                    <div class="sortColumn">
+                        <div class="listComments"><img src="Icons/CommentBox.svg" alt="Up Arrow" />
+                            <p>2</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="listEntry">
+                <div class="entryStart">
+                    <div class="status">
+                        <img src="Icons/StatusOpen.svg" alt="Status-Open" />
+                    </div>
+                    <div class="eTitle">
+                        <div class="mainTitle">
+                            <p>This is an example of an issue title, vertical split between this and the sub-title...<span class="tagBug">bug</span></p>
+                        </div>
+                        <div class="subTitle">
+                            <p>#224 opened 6 hours ago by ElonMusk</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="entryEnd">
+                    <div class="Column">
+                        <div class="listAssignee"><img src="https://picsum.photos/25?random=12" alt="Up Arrow" />
+                        </div>
+                    </div>
+                    <div class="sortColumn">
+                        <div class="listComments"><img src="Icons/CommentBox.svg" alt="Up Arrow" />
+                            <p>2</p>
+                        </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </body></html>

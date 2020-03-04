@@ -1,19 +1,68 @@
-body {
+/*Global Variables */
+:root {
+    --color1: #495561;
+    /* = var(--color1); Used for nav titles || Grey-Blue */
+
+    --color2: #333333;
+    /* = var(--color2); Used for list titles || Dark Grey */
+
+    --color3: #B3B3B3;
+    /* = var(--color3); Used for borders and sub-menus || Light Grey */
+
+    --color4: #F6F8FA;
+    /* = var(--color4); Used for section headers || Off white */
+
+    --color5: #dbdfe5;
+    /* = var(--color5); Used for non-active toggle buttons || Grey */
+
+    --color6: #0378DF;
+    /* = var(--color6); Used for active toggle buttons || Blue */
+}
+
+/*Common Used Generic Classes */
+.pmClear {
     padding: 0;
     margin: 0;
+
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-centre {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+/* Document Declarations */
+body {
     box-sizing: border-box;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
-    color: #495561;
+    color: var(--color1);
     font-size: 0;
 }
 
 h1 {
     font-size: 16px;
     font-weight: 450;
-    color: #333333;
+    color: var(--color2);
     padding-left: 5px;
     margin: 15px 5px 0px;
 }
+
+.wrapper {
+    min-height: 100vh;
+    max-width: 1200px;
+    padding: 0px 10px;
+    margin: auto;
+
+}
+
+.section {}
+
+/* Summary */
 
 .hideTag {
     text-align: end;
@@ -22,29 +71,21 @@ h1 {
     font-size: 14px;
 }
 
-.wrapper {
-    min-height: 100vh;
-    max-width: 1200px;
-    margin: auto;
-
-}
-
-.section {}
-
 .listBox {
     box-sizing: border-box;
     width: 100%;
     min-height: 200px;
     border-radius: 4px;
-    border: 1px solid #B3B3B3;
+    border: 1px solid var(--color3);
+    border-bottom: 0;
 }
 
 #sumHeader {
-    height: 48px;
+    min-height: 48px;
     width: 100%;
-    background-color: #F6F8FA;
+    background-color: var(--color4);
     display: flex;
-    border-bottom: 1px solid #B3B3B3;
+    border-bottom: 1px solid var(--color3);
     box-sizing: border-box;
 }
 
@@ -70,30 +111,27 @@ select {
 .title {
     font-size: 16px;
     font-weight: 500;
-
 }
 
-.sortContain {
-    display: flex;
+#sortContain {
     height: 100%;
     margin: 0;
-    justify-content: center;
-    align-content: center;
+    flex-wrap: wrap;
 }
 
 
-.sortContain p {
+#sortContain p {
     font-size: 14px;
     padding: 2px 10px;
     margin: 0;
     align-self: center;
     margin: 5px;
     color: white;
-    background-color: #E1E4E8;
+    background-color: var(--color5);
     border-radius: 15px;
 }
 
-.sortContain span {
+#sortContain span {
     font-size: 16px;
     padding: 2px;
     margin: 0;
@@ -101,7 +139,7 @@ select {
 }
 
 #likes {
-    background-color: #0378DF;
+    background-color: var(--color6);
 }
 
 .rangeContain {
@@ -111,6 +149,7 @@ select {
     justify-content: flex-end;
     align-content: center;
     padding-right: 15px;
+    flex-wrap: wrap;
 }
 
 .rangeContain p {
@@ -120,7 +159,7 @@ select {
     align-self: center;
     margin: 5px;
     color: white;
-    background-color: #E1E4E8;
+    background-color: var(--color5);
     border-radius: 15px;
 }
 
@@ -132,17 +171,19 @@ select {
 }
 
 #week {
-    background-color: #0378DF;
+    background-color: var(--color6);
 }
 
 .SlistEntry {
-    height: 65px;
-    border-bottom: 1px solid #B3B3B3;
+    min-height: 65px;
+    border-bottom: 1px solid var(--color3);
+    display: flex;
 }
+
 
 .status {
     float: left;
-    height: 65px;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -157,7 +198,8 @@ select {
 
 .eTitle {
     display: inline-block;
-    height: 65px;
+    height: 100%;
+    flex-basis: 100%;
 }
 
 
@@ -165,7 +207,7 @@ select {
     margin: 10px 0px 0px;
     font-size: 18px;
     font-weight: 600;
-    color: #333333;
+    color: var(--color2);
 }
 
 .tagBug {
@@ -209,7 +251,7 @@ select {
 
 .subTitle p {
     font-size: 13px;
-    margin: 0px;
+    margin: 0px 0 10px;
 }
 
 .sUpvotes {
@@ -227,7 +269,8 @@ select {
     font-weight: 400;
     display: inline-block;
     padding: 0px 10px;
-    color: #333333;
+    color: var(--color2);
+    padding: 0;
 }
 
 .sUpvotes img {
@@ -235,6 +278,9 @@ select {
     display: inline-block;
     height: 17px;
 }
+
+/* Pinned Issues */
+
 
 #pinnedCards {
     display: flex;
@@ -246,19 +292,21 @@ select {
     min-height: 120px;
     flex-basis: 370px;
     border-radius: 4px;
-    border: 1px solid #B3B3B3;
+    border: 1px solid var(--color3);
+    margin: 0px 10px;
+    overflow: hidden;
 }
 
 .cardTitle p {
     font-size: 18px;
     font-weight: 600;
-    color: #333333;
+    color: var(--color2);
     margin: 10px 15px 0px;
 }
 
 .cardSubTitle p {
     font-size: 13px;
-    margin: 5px 15px 0px;
+    margin: 5px 15px 30px;
 }
 
 .cardStatus {
@@ -283,6 +331,8 @@ select {
     margin: 0;
 }
 
+/* Main Issues List */
+
 .listNav {
     height: 36px;
     margin: 25px 0 10px;
@@ -301,15 +351,15 @@ select {
     display: flex;
     justify-content: center;
     align-content: center;
-    border-bottom: 1px solid #B3B3B3;
-    border-top: 1px solid #B3B3B3;
-    border-left: 1px solid #B3B3B3;
+    border-bottom: 1px solid var(--color3);
+    border-top: 1px solid var(--color3);
+    border-left: 1px solid var(--color3);
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
 }
 
 .filter p {
-    color: #333333;
+    color: var(--color1);
     font-weight: 500;
     font-size: 15px;
     margin: auto;
@@ -323,7 +373,7 @@ select {
 .searchBar {
     display: flex;
     width: 100%;
-    border: 1px solid #B3B3B3;
+    border: 1px solid var(--color3);
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
 
@@ -332,8 +382,7 @@ select {
 .searchBar form {
     display: flex;
     width: 100%;
-    padding: 0;
-    margin: 0;
+    background-color: #F9FAFB;
 }
 
 .searchBar img {
@@ -346,6 +395,7 @@ select {
     border: 0;
     line-height: 45px;
     font-size: 16px;
+    background-color: #F9FAFB;
     background-image: url(Icons/Magnify.svg);
     background-repeat: no-repeat;
     background-size: 15px 15px;
@@ -358,7 +408,7 @@ select {
     width: 25px;
     height: 20px;
     margin: auto 7px;
-    border: 1px solid #B3B3B3;
+    border: 1px solid var(--color3);
     border-radius: 3px;
     background-image: linear-gradient(#F9FAFB 10%, 40%, #E8ECEF 100%);
     display: flex;
@@ -378,7 +428,7 @@ select {
 .statusToggle {
     flex-basis: 300px;
     margin-left: 20px;
-    border: 1px solid #B3B3B3;
+    border: 1px solid var(--color3);
     border-radius: 3px;
     display: flex;
 }
@@ -389,7 +439,7 @@ select {
     display: flex;
     justify-content: center;
     align-content: center;
-    border-right: 1px solid #B3B3B3;
+    border-right: 1px solid var(--color3);
 }
 
 .statusOpen img {
@@ -403,7 +453,7 @@ select {
     font-size: 14px;
     font-weight: 700;
     margin: 0;
-    color: #333333;
+    color: var(--color2);
 }
 
 .statusOpen span {
@@ -411,8 +461,8 @@ select {
     font-size: 12px;
     font-weight: 700;
     margin: 0;
-    color: #666666;
-    background-color: #E1E4E8;
+    color: var(--color2);
+    background-color: var(--color5);
     padding: 1px 5px;
     border-radius: 10px;
     margin: 7px;
@@ -423,6 +473,7 @@ select {
     display: flex;
     justify-content: center;
     align-content: center;
+    background-color: var(--color4);
 }
 
 .statusClosed img {
@@ -436,7 +487,7 @@ select {
     font-size: 14px;
     font-weight: 700;
     margin: 0;
-    color: #999999;
+    color: var(--color3);
 }
 
 .statusClosed span {
@@ -494,9 +545,9 @@ select {
 .listHeader {
     height: 60px;
     width: 100%;
-    background-color: #F6F8FA;
+    background-color: var(--color4);
     display: flex;
-    border-bottom: 1px solid #B3B3B3;
+    border-bottom: 1px solid var(--color3);
     box-sizing: border-box;
     font-size: 16px;
     font-weight: 500;
@@ -540,9 +591,31 @@ select {
 }
 
 .listEntry {
-    height: 65px;
-    border-bottom: 1px solid #B3B3B3;
+    min-height: 65px;
+    border-bottom: 1px solid var(--color3);
+    display: flex;
 }
+
+.entryStart {
+    flex-basis: 80%;
+    display: flex;
+}
+
+.entryEnd {
+    flex-basis: 20%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+    font-size: 14px;
+    align-content: center;
+}
+
+.entryEnd p {
+    align-self: center;
+    margin-left: 10px;
+}
+
+
 
 .listComments {
     float: right;
@@ -550,6 +623,8 @@ select {
     align-content: center;
     justify-content: flex-end;
     height: 100%;
+    margin-left: 50px;
+    width: 50px;
 }
 
 .listComments img {
@@ -557,3 +632,24 @@ select {
     display: inline-block;
     height: 17px;
 }
+
+
+
+.listAssignee {
+    float: right;
+    display: flex;
+    align-content: center;
+    justify-content: flex-end;
+    height: 100%;
+    width: 50px;
+    padding-right: 10px;
+}
+
+.listAssignee img {
+    align-self: center;
+    display: inline-block;
+    height: 25px;
+}
+
+
+.assigneeColumn {}
