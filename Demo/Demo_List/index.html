@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Github Issue List Redesign</title>
+    <link a href="styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="section">
+            <div class="section">
+                <h1>Summary</h1>
+                <p class="hideTag">Hide</p>
+                <div class="listBox">
+                    <div id="sumHeader">
+                        <div>
+                            <form action="/action_page.php" class="title">
+                                <label for="assigned">Assigned: </label>
+                                <select id="assigned" name="assigned">
+                                    <option value="Javan">Javan Friedel</option>
+                                    <option value="Graham">Graham Kennery</option>
+                                    <option value="Elon">Elon Musk</option>
+                                    <option value="Mark">Mark Zuckerberg</option>
+                                </select></form>
+                        </div>
+                        <div>
+                            <div class="sortContain">
+                                <span class="title">Sort:</span>
+                                <p class="title" id="likes">Likes</p>
+                                <p class="title" id="recent">Recent</p>
+                                <p class="title" id="comments">Comments</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="rangeContain">
+                                <span class="title">Range:</span>
+                                <p class="title" id="day">1D</p>
+                                <p class="title" id="week">1W</p>
+                                <p class="title" id="month">1M</p>
+                                <p class="title" id="year">1Y</p>
+                                <p class="title" id="all">ALL</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="SlistEntry">
+                        <div class="status">
+                            <img src="Icons/StatusOpen.svg" alt="Status-Open" />
+                        </div>
+                        <div class="eTitle">
+                            <div class="mainTitle">
+                                <p>The gravity simulation will only work on my Macintosh computer <span class="tagBug">bug</span><span class="tagRegression">regression</span></p>
+                            </div>
+                            <div class="subTitle">
+                                <p>#224 opened 6 hours ago by ElonMusk</p>
+                            </div>
+                        </div>
+                        <div class="sUpvotes"><img src="Icons/UpArrow.svg" alt="Up Arrow" />
+                            <p>890</p>
+                        </div>
+                    </div>
+                    <div class="SlistEntry">
+                        <div class="status">
+                            <img src="Icons/StatusOpen.svg" alt="Status-Open" />
+                        </div>
+                        <div class="eTitle">
+                            <div class="mainTitle">
+                                <p>Myspace integration wont bring over my Nickelback song <span class="tagBug">bug</span></p>
+                            </div>
+                            <div class="subTitle">
+                                <p>#204 opened 5 days ago by MarkZucker</p>
+                            </div>
+                        </div>
+                        <div class="sUpvotes"><img src="Icons/UpArrow.svg" alt="Up Arrow" />
+                            <p>202</p>
+                        </div>
+                    </div>
+                    <div class="SlistEntry">
+                        <div class="status">
+                            <img src="Icons/StatusOpen.svg" alt="Status-Open" />
+                        </div>
+                        <div class="eTitle">
+                            <div class="mainTitle">
+                                <p>Feature Request: An AI to finish the project for all of us. Its easy right?<span class="tagRFE">RFE</span></p>
+                            </div>
+                            <div class="subTitle">
+                                <p>#192 opened 6 days ago by ClicheClient</p>
+                            </div>
+                        </div>
+                        <div class="sUpvotes"><img src="Icons/UpArrow.svg" alt="Up Arrow" />
+                            <p>198</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="section">
+            <h1>Pinned Issues</h1>
+            <p class="hideTag">Hide</p>
+            <div id="pinnedCards">
+                <div class="card">
+                    <div class="cardTitle"><p>How to turn off computer?</p></div>
+                    <div class="cardSubTitle"><p>#1 by Bob on Jan 7</p></div>
+                    <div class="cardStatus"><img src="Icons/StatusClosed.svg" alt="Status Closed" /> <p>Closed</p> <img src="Icons/CommentBox.svg" alt="Status Closed" /><p>1</p><img src="Icons/UpArrow.svg" alt="Status Closed" /><p>1100</p></div>
+                </div>
+                <div class="card">
+                    <div class="cardTitle"><p>Google integration exports data</p></div>
+                    <div class="cardSubTitle"><p>#72 by TinFoilHat on Fed 1</p></div>
+                    <div class="cardStatus"><img src="Icons/StatusClosed.svg" alt="Status Closed" /> <p>Closed</p> <img src="Icons/CommentBox.svg" alt="Status Closed" /><p>9</p><img src="Icons/UpArrow.svg" alt="Status Closed" /><p>99</p></div>
+                </div>
+                <div class="card">
+                    <div class="cardTitle"><p>Space in code effecting render in EI 6 <span class="tagCSS">CSS</span></p></div>
+                    <div class="cardSubTitle"><p>#1 by Bob on Jan 7</p></div>
+                    <div class="cardStatus"><img src="Icons/StatusOpen.svg" alt="Status Closed" /> <p>Closed</p> <img src="Icons/CommentBox.svg" alt="Status Closed" /><p>2</p><img src="Icons/UpArrow.svg" alt="Status Closed" /><p>1200</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body></html>
