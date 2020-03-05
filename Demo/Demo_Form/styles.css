@@ -62,6 +62,12 @@ h1 {
 
 .section {}
 
+div {
+font-size: 14px;
+}
+
+/* ---------------------- List View Elements ------------------ */
+
 /* Summary */
 
 .hideTag {
@@ -684,4 +690,125 @@ select {
     display: inline-block;
     height: 25px;
     border-radius: 2px;
+}
+
+/* ---------------------- Compose Box Elements ------------------ */
+
+.composeForm {
+    display: flex;
+    margin-top: 20px;
+}
+
+.profileColumn {
+    display: flex;
+    flex-basis: 10%;
+    justify-content: flex-end;
+}
+
+.profileColumn img {
+    height: 50px;
+    margin: 0px 15px;
+    border-radius: 3px;
+}
+
+.composeBox {
+    flex-basis: 70%;
+    border: 1px solid var(--color3);
+    position: relative;
+    border-radius: 3px;
+}
+
+.composeBox::before {
+    border-color: transparent;
+    content: " ";
+    display: block;
+    
+    position: absolute;
+    right: 100%;
+    
+    left: -19px;
+    top: 9px;
+
+    width: 0;
+    height: 0;
+
+    border-width: 8px;
+    margin-top: 1px;
+    margin-left: 2px;
+
+
+    border-right-color: var(--color3);
+    border-style: solid solid outset;
+}
+
+.composeBox::after {
+    border-color: transparent;
+    content: " ";
+    display: block;
+    position: absolute;
+    right: 100%;
+    left: -16px;
+    top: 10px;
+
+    width: 0;
+    height: 0;
+
+    border-width: 7px;
+    margin-top: 1px;
+    margin-left: 2px;
+
+
+    border-right-color: white;
+    border-style: solid solid outset;
+}
+
+
+.titleBox {
+    height: 40px;
+    margin: 5px;
+    display: flex;
+    border-radius: 3px;
+}
+
+.titleBox input {
+    font-size: 20px;
+    flex-basis: 90%;
+    padding-left: 10px;
+    border: 1px solid var(--color3);
+    border-right: 0;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.labelAdd {
+    flex-basis: 10%;
+    border: 1px solid var(--color3);
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-left: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.labelAdd img {
+    width: 25px;
+    margin: 0 0 0 15px;
+
+}
+
+#dropdownLabel {
+    width: 15px;
+    margin: 10px;
+}
+
+.menuItems {
+display: flex;
+    
+}
+
+.mardown
+
+.sideBar {
+    flex-basis: 20%;
+    background-color: purple;
 }
