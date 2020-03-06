@@ -44,6 +44,14 @@ body {
     font-size: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--color2);
+}
+
 h1 {
     font-size: 16px;
     font-weight: 450;
@@ -189,6 +197,7 @@ select {
 
 .SlistEntry:hover {
     background-color: var(--color4);
+    cursor: pointer;
 }
 
 
@@ -310,6 +319,7 @@ select {
 
 .card:hover {
     background-color: var(--color4);
+    cursor: pointer;
 }
 
 .cardTitle p {
@@ -444,6 +454,7 @@ select {
 
 #cancel:hover {
     filter: brightness(90%);
+    cursor: pointer;
 }
 
 .statusToggle {
@@ -550,6 +561,7 @@ select {
 
 .newIssueBlank:hover {
     filter: brightness(90%);
+    cursor: pointer;
 }
 
 .newIssueBlank p {
@@ -577,6 +589,7 @@ select {
 
 .newIssueTemplate:hover {
     filter: brightness(90%);
+    cursor: pointer;
 }
 
 .listHeader {
@@ -635,6 +648,7 @@ select {
 
 .listEntry:hover {
     background-color: var(--color4);
+    cursor: pointer;
 }
 
 .entryStart {
