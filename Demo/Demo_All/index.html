@@ -8,18 +8,20 @@
 
 </head>
 
-<body class="pmClear">
-    <div class="wrapper">
+<body class="pmClear"> <!-- body with only class pmClear which clears all padding and margin -->
+    <div class="wrapper"> <!-- 1200px wrap, up from 980 on default =->
 
         <!----------------------- Summary  ---------------------------->
 
         <div class="section" id="summary">
             <h1>Summary</h1>
-            <p class="hideTag" onclick="hideSummary()">Hide</p>
+            <p class="hideTag" onclick="hideSummary()">Hide</p> <!-- Hide Button, only for the summary section -->
             <div class="listBox">
                 <div id="sumHeader">
+                    
+                    <!-- Assignment Drop Down -->
                     <div>
-                        <form action="/action_page.php" class="title">
+                        <form action="/action_page.php" class="title"> <!-- Standard form selection, update to custom in future. -->
                             <label for="assigned">Assigned: </label>
                             <select id="assigned" name="assigned">
                                 <option value="Javan">Javan Friedel</option>
@@ -28,18 +30,22 @@
                                 <option value="Mark">Mark Zuckerberg</option>
                             </select></form>
                     </div>
+                    
+                    <!-- Sort Summary, Custome Radio Buttons-->
                     <div>
                         <div id="sortContain" class="flex-centre">
                             <span class="title">Sort:</span>
-                            <p class="title" id="likes" onclick="sortSumLikes()">Likes</p>
+                            <p class="title" id="likes" onclick="sortSumLikes()">Likes</p> <!-- Each function adds blue background to div, and changes other options to grey-->
                             <p class="title" id="recent" onclick="sortSumRecent()">Recent</p>
                             <p class="title" id="comments" onclick="sortSumComments()">Comments</p>
                         </div>
                     </div>
+                    
+                    <!-- Sort date range, Custom Radio Buttons -->
                     <div>
                         <div class="rangeContain">
                             <span class="title">Range:</span>
-                            <p class="title" id="day" onclick="sortRangeDay()">1D</p>
+                            <p class="title" id="day" onclick="sortRangeDay()">1D</p> <!-- Each function adds blue background to div, and changes other options to grey-->
                             <p class="title" id="week" onclick="sortRangeWeek()">1W</p>
                             <p class="title" id="month" onclick="sortRangeMonth()">1M</p>
                             <p class="title" id="year" onclick="sortRangeYear()">1Y</p>
@@ -47,7 +53,9 @@
                         </div>
                     </div>
                 </div>
-                <a href="details.html">
+                
+                <!-- List Entry-->
+                <a href="details.html"> <!-- Links entire section to the details demo page -->
                     <div class="SlistEntry">
                         <div class="entryStart">
                             <div class="status">
@@ -70,6 +78,7 @@
                     </div>
                 </a>
 
+                <!-- List Entry-->
                 <a href="details.html">
                     <div class="SlistEntry">
                         <div class="entryStart">
@@ -92,6 +101,8 @@
                         </div>
                     </div>
                 </a>
+                
+                <!-- List Entry-->
                 <a href="details.html">
                     <div class="SlistEntry">
                         <div class="entryStart">
@@ -114,6 +125,7 @@
                         </div>
                     </div>
                 </a>
+                
             </div>
         </div>
 
@@ -121,7 +133,7 @@
 
         <div class="section" id="pinnedIssues">
             <h1>Pinned Issues</h1>
-            <p class="hideTag" onclick="hidePinned()">Hide</p>
+            <p class="hideTag" onclick="hidePinned()">Hide</p> <!-- Fucntion hides just the Pinned Section -->
             <div id="pinnedCards">
                 <div class="card" onclick="window.location='details.html'">
                     <div class="cardTitle">
@@ -136,7 +148,7 @@
                         <p>1100</p>
                     </div>
                 </div>
-                <div class="card" onclick="window.location='details.html'">
+                <div class="card" onclick="window.location='details.html'"> <!-- onclick links to details page, this method was used as to not interfere with the flexbox i have for format -->
                     <div class="cardTitle">
                         <p>Google integration exports data</p>
                     </div>
@@ -165,7 +177,9 @@
             </div>
         </div>
 
-        <!----------------------- Main Issues List Nav ---------------------------->
+        <!----------------------- Main Issues List ---------------------------->
+        
+        <!----------------------- Nav ---------------------------->
 
         <div class="section" id="issuesList">
             <div class="listNav">
@@ -193,7 +207,7 @@
                         <p>Closed</p><span>3,186</span>
                     </div>
                 </div>
-                <div class="newIssue" onclick="window.location='form.html'">
+                <div class="newIssue" onclick="window.location='form.html">
                     <div class="newIssueBlank">
                         <p>New Issue</p>
                     </div>
@@ -203,31 +217,65 @@
             </div>
         </div>
 
-        <!----------------------- Main Issues List  ---------------------------->
+        <!----------------------- List  ---------------------------->
 
         <div class="listBox">
+            
+            <!----------------------- Header ---------------------------->
             <div class="listHeader">
                 <div id="listStart">
                     <div id="authorSort">
                         <p>Author</p>
                         <img src="Icons/DropArrow.svg" alt="drop arrow" />
+                        <div class="dropDownMenu">
+                            <ul>
+                                <li>Elon Musk</li>
+                                <li>Mark Zucker</li>
+                                <li>ClicheClient</li>
+                            </ul>
+
+                        </div>
                     </div>
                     <div id="labelSort">
                         <p>Label</p>
                         <img src="Icons/DropArrow.svg" alt="drop arrow" />
+                        <div class="dropDownMenu">
+                            <ul>
+                                <li>Bug</li>
+                                <li>RFE</li>
+                                <li>CSS</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div id="listEnd">
                     <div id="assigneeSort">
                         <p>Assignee</p>
                         <img src="Icons/DropArrow.svg" alt="drop arrow" />
+                        <div class="dropDownMenu">
+                            <ul>
+                                <li>Javan Friedel</li>
+                                <li>Graham Kennery</li>
+                                <li>Elon Musk</li>
+                                <li>Mark Zucker</li>
+                            </ul>
+                        </div>
                     </div>
                     <div id="mainSort">
                         <p>Sort</p>
                         <img src="Icons/DropArrow.svg" alt="drop arrow" />
+                        <div class="dropDownMenu">
+                            <ul>
+                                <li id=recentListSort><img src="Icons/Closed.svg" /><p>Recent</p></li>
+                                <li id=likesListSort><img src="Icons/Closed.svg" />Comments</li>
+                                <li id=commentsListSort><img src="Icons/Closed.svg" />Likes</li>     
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
+            
+            <!----- List Entry ----->
             <div class="listEntry" onclick="window.location='details.html'">
                 <div class="entryStart">
                     <div class="status">
@@ -255,6 +303,8 @@
 
                 </div>
             </div>
+            
+            <!----- List Entry ----->
             <div class="listEntry" onclick="window.location='details.html'">
                 <div class="entryStart">
                     <div class="status">
@@ -282,6 +332,8 @@
 
                 </div>
             </div>
+            
+            <!----- List Entry ----->
             <div class="listEntry" onclick="window.location='details.html'">
                 <div class="entryStart">
                     <div class="status">
@@ -309,6 +361,8 @@
 
                 </div>
             </div>
+            
+            <!----- List Entry ----->
             <div class="listEntry" onclick="window.location='details.html'">
                 <div class="entryStart">
                     <div class="status">
@@ -336,6 +390,8 @@
 
                 </div>
             </div>
+            
+            <!----- List Entry ----->
             <div class="listEntry" onclick="window.location='details.html'">
                 <div class="entryStart">
                     <div class="status">
@@ -363,6 +419,8 @@
 
                 </div>
             </div>
+            
+            <!----- List Entry ----->
             <div class="listEntry" onclick="window.location='details.html'">
                 <div class="entryStart">
                     <div class="status">
@@ -390,6 +448,8 @@
 
                 </div>
             </div>
+            
+            <!----- List Entry ----->
             <div class="listEntry" onclick="window.location='details.html'">
                 <div class="entryStart">
                     <div class="status">
@@ -417,6 +477,8 @@
 
                 </div>
             </div>
+            
+            <!----- List Entry ----->
             <div class="listEntry" onclick="window.location='details.html'">
                 <div class="entryStart">
                     <div class="status">
@@ -444,6 +506,8 @@
 
                 </div>
             </div>
+            
+            <!----- List Entry ----->
             <div class="listEntry" onclick="window.location='details.html'">
                 <div class="entryStart">
                     <div class="status">
@@ -471,6 +535,8 @@
 
                 </div>
             </div>
+            
+            <!----- List Entry ----->
             <div class="listEntry" onclick="window.location='details.html'">
                 <div class="entryStart">
                     <div class="status">
@@ -498,6 +564,8 @@
 
                 </div>
             </div>
+            
+            <!----- List Entry ----->
             <div class="listEntry" onclick="window.location='details.html'">
                 <div class="entryStart">
                     <div class="status">
@@ -525,6 +593,8 @@
 
                 </div>
             </div>
+            
+            <!----- List Entry ----->
             <div class="listEntry" onclick="window.location='details.html'">
                 <div class="entryStart">
                     <div class="status">
@@ -552,6 +622,8 @@
 
                 </div>
             </div>
+            
+            <!----- List Entry ----->
             <div class="listEntry" onclick="window.location='details.html'">
                 <div class="entryStart">
                     <div class="status">
@@ -578,8 +650,12 @@
                     </div>
                 </div>
             </div>
+            
+            <!----- List Box End ----->
         </div>
     </div>
-    <script src="scripts.js"></script>
+    <!----- Wrap End ----->
+
+    <script src="scripts.js"></script> <!----- External javascript page to be used among all demo's ----->
 
 </body></html>

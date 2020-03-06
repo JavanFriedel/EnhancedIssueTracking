@@ -71,3 +71,9 @@
             document.getElementById("year").style.backgroundColor = "#dbdfe5";
             document.getElementById("all").style.backgroundColor = "#0378DF";
         }
+
+        function previewHighlight() {
+            document.getElementById("preview").style.backgroundColor = "#0378DF";
+            
+            document.getElementById("commentDraft").value = "With more time, this would show a preview of your markdown. Right now it just erases what you typed and replaces it with this. I dub thee good for now. ^_^";            
+        }
