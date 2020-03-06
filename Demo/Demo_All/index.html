@@ -15,7 +15,7 @@
 
         <div class="section" id="summary">
             <h1>Summary</h1>
-            <p class="hideTag">Hide</p>
+            <p class="hideTag" onclick="hideSummary()">Hide</p>
             <div class="listBox">
                 <div id="sumHeader">
                     <div>
@@ -31,19 +31,19 @@
                     <div>
                         <div id="sortContain" class="flex-centre">
                             <span class="title">Sort:</span>
-                            <p class="title" id="likes">Likes</p>
-                            <p class="title" id="recent">Recent</p>
-                            <p class="title" id="comments">Comments</p>
+                            <p class="title" id="likes" onclick="sortSumLikes()">Likes</p>
+                            <p class="title" id="recent" onclick="sortSumRecent()">Recent</p>
+                            <p class="title" id="comments" onclick="sortSumComments()">Comments</p>
                         </div>
                     </div>
                     <div>
                         <div class="rangeContain">
                             <span class="title">Range:</span>
-                            <p class="title" id="day">1D</p>
-                            <p class="title" id="week">1W</p>
-                            <p class="title" id="month">1M</p>
-                            <p class="title" id="year">1Y</p>
-                            <p class="title" id="all">ALL</p>
+                            <p class="title" id="day" onclick="sortRangeDay()">1D</p>
+                            <p class="title" id="week" onclick="sortRangeWeek()">1W</p>
+                            <p class="title" id="month" onclick="sortRangeMonth()">1M</p>
+                            <p class="title" id="year" onclick="sortRangeYear()">1Y</p>
+                            <p class="title" id="all" onclick="sortRangeAll()">ALL</p>
                         </div>
                     </div>
                 </div>
@@ -121,7 +121,7 @@
 
         <div class="section" id="pinnedIssues">
             <h1>Pinned Issues</h1>
-            <p class="hideTag">Hide</p>
+            <p class="hideTag" onclick="hidePinned()">Hide</p>
             <div id="pinnedCards">
                 <div class="card" onclick="window.location='details.html'">
                     <div class="cardTitle">
@@ -172,11 +172,12 @@
                 <div class="search">
                     <div class="filter">
                         <p>Filters</p><img src="Icons/DropArrow.svg" alt="drop arrow" />
+                        <div class="dropDownMenu"></div>
                     </div>
                     <div class="searchBar">
                         <form class="pmClear">
                             <input type="text" id="searchQ" name="searchQ" value="is:issue is:open">
-                            <div id="cancel">
+                            <div id="cancel" onclick="clearSearch()">
                                 <p>X</p>
                             </div>
                         </form>
@@ -579,4 +580,6 @@
             </div>
         </div>
     </div>
+    <script src="scripts.js"></script>
+
 </body></html>
