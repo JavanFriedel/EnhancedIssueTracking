@@ -20,7 +20,22 @@ As a whole, to gaurantee success I will be following a design process and workfl
  - [x] Sketch / Mockup concept ideas.
  - [x] Digital Mockup in Illustrator (Also provides DOM overview)
  - [x] Create Code Overview Based on Findings
- - [ ] Code Sprints (Code, Test, Review, Repeat)
- - [ ] Review Documents for Legibility and Standards
- - [ ] Complete / Launch
+ - [x] Code Sprints (Code, Test, Review, Repeat)
+ - [x] Review Documents for Legibility and Standards
+ - [x] Complete / Launch
  
+
+### Assumptions
+1. Redesign must stay in line with website flow and feel. This limits the extent of what I can redesign.
+2. The target market is not changing with this redesign, making its primary users coders and collaborative groups.
+
+### Future Implimentations
+
+This project is actually very open. There are so many things that could make the issues tab a better experience for all audiences. However, due to the scope and time on this project, there are many things that have been left out of this demo. These include;
+
+1. More semantic markup
+2. ARIA accessability addition (Even more important with voice assistance being used by smartphone/home software.)
+3. More concise CSS and optimizations 
+4. More functionality on the front-end giving a better expectation for the final product 
+5. Website navigation and footer to mimick the actual site more closely
+6. Mobile optimization
