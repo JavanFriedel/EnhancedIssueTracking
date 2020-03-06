@@ -8,7 +8,7 @@ Over the next few days I will be starting with a clean slate. Researching, desig
    * Github is designed with collaboration of code in mind, a very binary contruct. Design elements do not follow this principle, making it hard to commit design changes along the way. For this reason I will be uploading all my design files at the end.
    
 * Research
-   * As a fairly new developer, I have not had a great deal of experience with the issue tracker on Github, nor have I had the time to find out, first hand, its problems. To be able to come up with a suitable upgrade to its design I will have to do research before we begin, and make some assumptions about the system as a whole. These assumptions will be committed in an "assumptions.txt" file once research is complete.
+   * As a fairly new developer, I have not had a great deal of experience with the issue tracker on Github, nor have I had the time to find out, first hand, its problems. To be able to come up with a suitable upgrade to its design I will have to do research before we begin, and make some assumptions about the system as a whole.
    
 
 ### The Process
@@ -20,7 +20,24 @@ As a whole, to gaurantee success I will be following a design process and workfl
  - [x] Sketch / Mockup concept ideas.
  - [x] Digital Mockup in Illustrator (Also provides DOM overview)
  - [x] Create Code Overview Based on Findings
- - [ ] Code Sprints (Code, Test, Review, Repeat)
- - [ ] Review Documents for Legibility and Standards
- - [ ] Complete / Launch
+ - [x] Code Sprints (Code, Test, Review, Repeat)
+ - [x] Review Documents for Legibility and Standards
+ - [x] Complete / Launch
  
+
+### Assumptions
+1. Redesign must stay in line with website flow and feel. This limits the extent of what can be redesigned.
+2. The target market is not changing with this redesign, making its primary users coders and collaborative groups with a large degree of experience and familiarity.
+3. For the purpose of familiarity menu options should be roughly in the same spot to avoid confusion and pushback on the redesign.
+4. Due to the target market, the user base will appreciate function over eye candy. This should be a huge guiding principle in design choices. 
+
+### Future Implimentations
+
+This project is actually very open. There are so many things that could make the issues tab a better experience for all audiences. However, due to the scope and time on this project, there are many things that have been left out of this demo. These include;
+
+1. More semantic markup
+2. ARIA accessability addition (Even more important with voice assistance being used by smartphone/home software.)
+3. More concise CSS and optimizations 
+4. More functionality on the front-end giving a better expectation for the final product 
+5. Website navigation and footer to mimick the actual site more closely
+6. Mobile optimization
