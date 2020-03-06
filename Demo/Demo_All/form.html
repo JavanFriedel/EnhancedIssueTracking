@@ -27,7 +27,7 @@
                             <div class="markdownIcon"><img src="Icons/Markdown.svg" alt="markdown " /></div>
                             <p>Styling with Markdown is Supported</p>
                         </div>
-                        <div class="preview">
+                        <div id="preview" onclick="previewHighlight()">
                             <p>Preview</p>
                         </div>
                         <div class="markdownIcons">
@@ -48,7 +48,7 @@
                     </div>
 
                     <div class="messageBox">
-                        <textarea name="issue" placeholder="Leave a Comment..."></textarea>
+                        <textarea id="commentDraft" name="issue" placeholder="Leave a Comment..."></textarea>
                         <div class="attachDrop">
                             <p>Attach files by dragging &amp; dropping them, selecting or pasting them.</p><img src="Icons/Markdown.svg" alt="markdown " />
                         </div>
@@ -130,4 +130,6 @@
             </div>
         </div>
     </div>
+    
+    <script src="scripts.js"></script>
 </body></html>

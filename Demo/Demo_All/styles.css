@@ -1462,4 +1462,7 @@ background-color: var(--color6);
 border: 2px solid red;
 }
 
+.dNew:hover {
+cursor: pointer;
+}
 
