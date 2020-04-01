@@ -44,6 +44,41 @@ body {
     font-size: 0;
 }
 
+a {
+    text-decoration: none;
+    color: var(--color2);
+    font-weight: 300;
+}
+
+a:visited {
+    color: var(--color2);
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 0;
+    padding: 10px 10px;
+    border-bottom: 1px solid var(--color3);
+    width: calc(100%-20px);
+    display: flex;
+    align-items: center;
+}
+
+li img {
+    flex-basis: 30%;
+    height: 12px;
+}
+
+li p {
+    margin: 0;
+    padding: 0;
+}
+
 h1 {
     font-size: 16px;
     font-weight: 450;
@@ -62,6 +97,12 @@ h1 {
 
 .section {}
 
+div {
+    font-size: 14px;
+}
+
+/* ---------------------- List View Elements ------------------ */
+
 /* Summary */
 
 .hideTag {
@@ -69,6 +110,11 @@ h1 {
     padding-right: 5px;
     margin: 0;
     font-size: 14px;
+}
+
+.hideTag:hover {
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .listBox {
@@ -105,13 +151,15 @@ form {
 select {
     padding: 2px;
     border-radius: 4px;
-    background-image: linear-gradient(#F9FAFB 10%, 40%, #E8ECEF 100%)
+    background-image: linear-gradient(#F9FAFB 10%, 40%, #E8ECEF 100%);
+    text-align-last: center;
 }
 
 .title {
     font-size: 16px;
     font-weight: 500;
 }
+
 
 #sortContain {
     height: 100%;
@@ -142,6 +190,18 @@ select {
     background-color: var(--color6);
 }
 
+#likes:hover {
+    cursor: pointer;
+}
+
+#recent:hover {
+    cursor: pointer;
+}
+
+#comments:hover {
+    cursor: pointer;
+}
+
 .rangeContain {
     display: flex;
     height: 100%;
@@ -163,6 +223,10 @@ select {
     border-radius: 15px;
 }
 
+.rangeContain p:hover {
+    cursor: pointer;
+}
+
 .rangeContain span {
     font-size: 16px;
     padding: 2px;
@@ -182,6 +246,7 @@ select {
 
 .SlistEntry:hover {
     background-color: var(--color4);
+    cursor: pointer;
 }
 
 
@@ -303,6 +368,7 @@ select {
 
 .card:hover {
     background-color: var(--color4);
+    cursor: pointer;
 }
 
 .cardTitle p {
@@ -437,6 +503,7 @@ select {
 
 #cancel:hover {
     filter: brightness(90%);
+    cursor: pointer;
 }
 
 .statusToggle {
@@ -543,6 +610,7 @@ select {
 
 .newIssueBlank:hover {
     filter: brightness(90%);
+    cursor: pointer;
 }
 
 .newIssueBlank p {
@@ -570,6 +638,7 @@ select {
 
 .newIssueTemplate:hover {
     filter: brightness(90%);
+    cursor: pointer;
 }
 
 .listHeader {
@@ -604,20 +673,24 @@ select {
 
 #authorSort {
     display: flex;
+    align-items: center;
 }
 
 #labelSort {
     display: flex;
     margin-left: 50px;
+    align-items: center;
 }
 
 #assigneeSort {
     display: flex;
+    align-items: center;
 }
 
 #mainSort {
     display: flex;
     margin-left: 50px;
+    align-items: center;
 }
 
 .listEntry {
@@ -628,6 +701,7 @@ select {
 
 .listEntry:hover {
     background-color: var(--color4);
+    cursor: pointer;
 }
 
 .entryStart {
@@ -685,3 +759,710 @@ select {
     height: 25px;
     border-radius: 2px;
 }
+
+/* ---------------------- Compose Box Elements ------------------ */
+
+.composeForm {
+    display: flex;
+    margin-top: 20px;
+    align-items: flex-start;
+}
+
+.profileColumn {
+    display: flex;
+    flex-basis: 10%;
+    justify-content: flex-end;
+}
+
+.profileColumn img {
+    height: 50px;
+    margin: 0px 15px;
+    border-radius: 3px;
+}
+
+.middleColumn {
+    flex-basis: 70%;
+}
+
+.composeBox {
+    border: 1px solid var(--color3);
+    position: relative;
+    border-radius: 3px;
+}
+
+.composeBox::before {
+    border-color: transparent;
+    content: " ";
+    display: block;
+
+    position: absolute;
+    right: 100%;
+
+    left: -19px;
+    top: 9px;
+
+    width: 0;
+    height: 0;
+
+    border-width: 8px;
+    margin-top: 1px;
+    margin-left: 2px;
+
+
+    border-right-color: var(--color3);
+    border-style: solid solid outset;
+}
+
+.composeBox::after {
+    border-color: transparent;
+    content: " ";
+    display: block;
+    position: absolute;
+    right: 100%;
+    left: -16px;
+    top: 10px;
+
+    width: 0;
+    height: 0;
+
+    border-width: 7px;
+    margin-top: 1px;
+    margin-left: 2px;
+
+
+    border-right-color: white;
+    border-style: solid solid outset;
+}
+
+
+.titleBox {
+    height: 40px;
+    margin: 5px;
+    display: flex;
+    border-radius: 3px;
+}
+
+.titleBox input {
+    font-size: 20px;
+    flex-basis: 90%;
+    padding-left: 10px;
+    border: 1px solid var(--color3);
+    border-right: 0;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.labelAdd {
+    flex-basis: 10%;
+    border: 1px solid var(--color3);
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-left: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.labelAdd img {
+    width: 25px;
+    margin: 0 0 0 15px;
+
+}
+
+#dropdownLabel {
+    width: 15px;
+    margin: 10px;
+}
+
+.menuItems {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+
+}
+
+
+.markdownTooltip {
+    padding-left: 10px;
+    display: flex;
+    align-content: center;
+}
+
+.markdownTooltip p {
+    font-size: 14px;
+    padding: 0 5px;
+    margin: 10px 0;
+}
+
+.markdownIcon {
+    display: flex;
+}
+
+.markdownIcon img {
+    width: 25px;
+}
+
+#preview {
+    height: 25px;
+    flex-basis: 75px;
+    background-color: var(--color5);
+    border-radius: 15px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+#preview:hover {
+background-color: var(--color6);
+    cursor: pointer;
+}
+
+#preview p {
+    margin: 0;
+    align-self: center;
+    font-weight: 700;
+}
+
+.markdownIcons {
+    display: flex;
+}
+
+.markdownIcons img {
+    height: 15px;
+    width: 20px;
+    padding-left: 10px;
+    align-self: center;
+}
+
+.markdownIcons img:last-child {
+    height: 10px;
+    width: 10px;
+    padding: 0 10px 0 0;
+}
+
+.messageBox {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.messageBox textarea {
+    box-sizing: border-box;
+    max-width: 830px;
+    min-width: calc(100% - 10px);
+    width: calc(100% - 10px);
+    min-height: 240px;
+    margin: 0 5px;
+    padding: 5px;
+    border-radius: 3px;
+    background-color: var(--color4);
+    border-bottom: dashed 2px var(--color3);
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+}
+
+.attachDrop {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 5px;
+    width: calc(100% - 10px);
+    margin: -2px 5px;
+    border: 1px solid var(--color3);
+    background-color: var(--color4);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 5px;
+
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.attachDrop p {
+    margin: 0;
+    padding: 0;
+}
+
+.attachDrop img {
+    width: 25px;
+}
+
+
+.issueDetails {
+    display: flex;
+    flex-basis: 80%;
+}
+
+.submitOptions {
+    display: flex;
+    padding: 10px 0 0;
+}
+
+.submitIssue {
+    display: flex;
+    justify-content: flex-end;
+    flex-basis: 20%;
+}
+
+.submitIssue p {
+    border: 2px solid #39B54A;
+    border-radius: 3px;
+    flex-basis: 80px;
+    margin-left: 20px;
+    background-image: linear-gradient(#33CE57 10%, 40%, #2EAC4D 100%);
+    text-align: center;
+    font-size: 16px;
+    padding: 5px;
+    margin: 5px;
+    color: white;
+    font-weight: 700;
+}
+
+.sideBar {
+    flex-basis: 20%;
+    margin-left: 10px;
+}
+
+.sideBar h2 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color3);
+}
+
+.sideBar p {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color3);
+}
+
+.Ccard {
+    position: relative;
+    min-height: 100px;
+    flex-basis: 370px;
+    border-radius: 4px;
+    border: 1px solid var(--color3);
+    overflow: hidden;
+    margin: 15px 0;
+}
+
+
+.Ccard:hover {
+    background-color: var(--color4);
+}
+
+.CcardTitle p {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color2);
+    margin: 10px 15px 0px;
+}
+
+.CcardSubTitle p {
+    font-size: 13px;
+    margin: 5px 15px 30px;
+}
+
+.CcardStatus {
+    position: absolute;
+    bottom: 5px;
+    display: flex;
+    width: 100%;
+}
+
+.CcardStatus img {
+    position: relative;
+    height: 20px;
+    display: inline-block;
+    margin: 0 5px 0 15px;
+}
+
+
+.CcardStatus p {
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    margin: 0;
+}
+
+.info {
+    display: flex;
+}
+
+.info img {
+    width: 20px;
+    margin: 5px;
+}
+
+.info p {
+    color: var(--color3);
+    margin: 10px 5px;
+}
+
+.dTitle {
+    border-bottom: 2px solid var(--color3);
+}
+
+.dTitle h1 {
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--color2);
+}
+
+.statusDetails {
+    display: flex;
+    align-content: center;
+
+}
+
+.dStart {
+    min-height: 60px;
+    flex-basis: 80%;
+    display: flex;
+    align-items: center;
+}
+
+.dStart img {
+    width: 30px;
+    margin: 0 10px;
+}
+
+.dStart h2 {
+    font-size: 26px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.dStart h3 {
+    font-size: 20px;
+    font-weight: 350;
+    margin: 0 10px;
+}
+
+.dEnd {
+    flex-basis: 20%;
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5px;
+
+}
+
+.dNew {
+    height: 35px;
+    border: 2px solid #39B54A;
+    border-radius: 3px;
+    flex-basis: 135px;
+    margin-left: 20px;
+    display: flex;
+    background-image: linear-gradient(#33CE57 10%, 40%, #2EAC4D 100%);
+}
+
+
+.dNewblank {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-basis: 80%;
+}
+
+.dNewblank:hover {
+    filter: brightness(90%);
+}
+
+.dNewblank p {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    margin: 0;
+    align-self: center;
+    white-space: nowrap;
+    margin: 5px;
+}
+
+.dNewTemplate {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-basis: 20%;
+    border-left: 2px solid #39B54A;
+}
+
+.dNewTemplate img {
+    width: 10px;
+    margin: 5px;
+}
+
+.dNewtemplate:hover {
+    filter: brightness(90%);
+}
+
+.feedWrap {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+.feed {
+    flex-basis: 80%;
+    min-height: 200px;
+}
+
+.commentContain {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+
+.commentBoxDetails {
+    flex-basis: 90%;
+    border: 1px solid var(--color3);
+    border-radius: 3px;
+    border-top: 0;
+    border-bottom: 0;
+}
+
+.feedSide {
+    flex-basis: 20%;
+    min-height: 60px;
+    margin: 0 15px;
+}
+
+.feedSide h3 {
+    font-weight: 600;
+
+}
+
+.feedSide p {
+    border-bottom: 1px solid var(--color3);
+    padding-bottom: 15px;
+}
+
+.subscribe {
+    display: flex;
+    border: 1px solid var(--color3);
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+    border-radius: 3px;
+    background-image: linear-gradient(#F9FAFB 10%, 40%, #E8ECEF 100%);
+
+}
+
+.subscribe p {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.subscribe img {
+    height: 12px;
+    margin: 5px;
+}
+
+.commentHeader {
+    height: 40px;
+    background-image: linear-gradient(#F9FAFB 10%, 40%, #E8ECEF 100%);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.commentBoxDetails .composeBox::after {
+    border-right-color: #f0f0f0;
+}
+
+
+.commentHeader p {
+    font-size: 14px;
+    margin: 0 10px;
+}
+
+.headerOptions {
+    display: flex;
+
+}
+
+.headerOptions img {
+    width: 20px;
+    margin: 10px;
+}
+
+.headerOptions span {
+    border: 1px solid var(--color3);
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.detailMessage {
+    min-height: 100px;
+    z-index: 2;
+}
+
+
+.detailMessage p {
+    color: var(--color1);
+    padding: 0 10px;
+    margin: 10px;
+}
+
+.detailFooter {
+    position: relative;
+    height: 40px;
+    background-color: red;
+    background-image: linear-gradient(#E8ECEF 10%, 40%, #F9FAFB 100%);
+    border-top: 1px solid var(--color3);
+    display: flex;
+}
+
+.detailFooter::after {
+    position: absolute;
+    display: block;
+    width: 2px;
+    background-color: var(--color3);
+    content: "";
+    top: 0px;
+    bottom: -32px;
+    left: 15px;
+    z-index: -1;
+}
+
+.footerStart {
+    flex-basis: 50%;
+    display: flex;
+}
+
+.vote {
+    display: flex;
+    height: 100%;
+    width: 65px;
+    align-items: center;
+    border-right: 1px solid var(--color3);
+    justify-content: center;
+}
+
+.vote img {
+    flex-basis: 50%;
+    height: 17px;
+}
+
+.vote p {
+    flex-basis: 50%;
+}
+
+.footerEnd {
+    display: flex;
+    flex-basis: 50%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.currentReactions {
+    display: flex;
+    width: 65px;
+    align-items: center;
+    border-left: 1px solid var(--color3);
+    height: 100%;
+}
+
+.currentReactions img {
+    flex-basis: 50%;
+    height: 17px;
+    margin-left: 10px;
+}
+
+.currentReactions p {
+    flex-basis: 50%;
+    margin: 0;
+}
+
+.addReaction {
+    display: flex;
+    align-items: center;
+}
+
+.addReaction img {
+    height: 17px;
+    margin: 0 10px 0 5px;
+}
+
+#pullStatus {
+    display: block;
+    margin: 5px 0 0;
+}
+
+.participants img {
+    height: 45px;
+    margin: 2px;
+}
+
+/*  ----------- Interactives ------------------ */
+
+.dropDownMenu {
+    display: none;
+    position: absolute;
+    border-radius: 3px;
+    margin: 75px 0;
+    border: 1px solid var(--color3);
+    background-color: var(--color4);
+    border-bottom: 0;
+    width: 150px;
+
+}
+
+#authorSort:hover {
+    cursor: pointer;
+}
+
+#labelSort:hover {
+    cursor: pointer;
+}
+
+#assigneeSort:hover {
+    cursor: pointer;
+}
+
+#mainSort:hover {
+    cursor: pointer;
+}
+
+#authorSort:hover .dropDownMenu {
+    display: block;
+    opacity: 100;
+}
+
+#labelSort:hover .dropDownMenu {
+    display: block;
+    opacity: 100;
+}
+
+#assigneeSort:hover .dropDownMenu {
+    display: block;
+    opacity: 100;
+    margin-top: 95px;
+}
+
+#mainSort:hover .dropDownMenu {
+    display: block;
+    opacity: 100;
+    transform: translateX(-90px);
+}
+
+#likesListSort img {
+    opacity: 0;
+}
+
+#commentsListSort img {
+    opacity: 0;
+}
+
+.outofBounds:hover {
+border: 2px solid red;
+}
+
+.dNew:hover {
+cursor: pointer;
+}
+

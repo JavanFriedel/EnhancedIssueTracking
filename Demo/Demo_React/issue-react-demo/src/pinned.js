@@ -1,13 +1,17 @@
 import React from 'react';
 
  export const PinnedCards = () => {
+    function hidePinned() {
+        document.getElementById("pinnedIssues").style.display = "none";
+    }
+
     return (
         <div>      
             {/*                    -----------------------  Pinned Issues  -------------------------------                         */}
 
           <div className="section" id="pinnedIssues">
               <h1>Pinned Issues</h1>
-              <p className="hideTag">Hide</p>
+              <p className="hideTag" onClick={hidePinned}>Hide</p>
               <div id="pinnedCards">
                   <div className="card">
                       <div className="cardTitle">

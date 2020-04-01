@@ -1,13 +1,18 @@
 import React from 'react';
 
- export const SummaryList = () => {
+ export const SummaryList = () => {  
+
+function hideSummary(){
+    document.getElementById("summary").style.display = "none"
+}
+
     return (
         <div>      
-            {/* -----------------------  SUMMARY  -------------------------------                         */} */}
+            {/* -----------------------  SUMMARY  -------------------------------                         */}
   
             <div className="section" id="summary">
                 <h1>Summary</h1>
-                <p className="hideTag">Hide</p>
+                <p className="hideTag" onClick={hideSummary}>Hide</p>
                 <div className="listBox">
                     <div id="sumHeader">
                         <div>

@@ -11,9 +11,9 @@ class Main extends React.Component {
     return (
         <div>      
             <div className="wrapper">
-                <SummaryList />;
-                <PinnedCards />;
-                <IssueList />;
+                <SummaryList />
+                <PinnedCards />
+                <IssueList />
             </div>
         </div>
     )

@@ -20,11 +20,9 @@ let templateEntries = [
       
 ]
 
-
-
 // How any list items would you like to be viewd?
 let numEntries = 10;
-let sortComment = true;
+var sortComment = false;
 let sortLikes = false;
 
 // this is essentially a function that will display our information in the format that we want.
@@ -40,7 +38,7 @@ const ListEntry = (props) => {
                         <p>{props.title}<span className="tagBug">{props.tag}</span></p>
                     </div>
                     <div className="subTitle">
-                        <p>#{Math.floor (Math.random() * 1000)} opened on {props.date} by {props.author}</p>
+                        <p># {props.entered * 3} opened on {props.date} by {props.author}</p>
                     </div>
                 </div>
             </div>
@@ -73,14 +71,15 @@ function FullList (props) {
     } else if(sortLikes === true) {
         props.props.sort((a,b) => (a.numLikes < b.numLikes) ? 1 : -1);
     } else if (sortComment === false && sortLikes === false){
-        props.props.sort((a,b) => (a.entered > b.entered) ? 1 : -1);
+        console.log("This worked!")
+        props.props.sort((a,b) => (a.entered > b.entered) ? 1 : (a.entered > b.entered) ? -1 : 0);
     }
 
     // After sorting the array of template options into its propper order, this constructs an array with the amount list items we want per page, and returns it to the constructor in this case const IssueList
     for (var i = 0; i < numEntries; i++){
             
         selectEntry = i;
-        console.log(selectEntry)
+        // console.log(selectEntry)
         
         // let selectEntry = Math.floor(Math.random() * templateEntries.length)
         console.log(props.props[selectEntry].title);
@@ -91,7 +90,8 @@ function FullList (props) {
             author={props.props[selectEntry].author} 
             tag={props.props[selectEntry].tag}  
             numComments={props.props[selectEntry].numComments}
-            numLikes={props.props[selectEntry].numLikes}  
+            numLikes={props.props[selectEntry].numLikes}
+            entered={props.props[selectEntry].entered}    
             key={i} 
         />);
     }
@@ -101,6 +101,18 @@ function FullList (props) {
 
 // this is the actual export of this javascript, comes with the filter search, open / closed toggle, and the new issue button
  export const IssueList = () => {
+    
+    function clearSearch() {
+        document.getElementById("searchQ").value = " ";
+    }
+
+    function SortCommentToggle () {
+        
+        console.log("Clicked!");
+        sortComment = true;
+        IssueList.forceUpdate();
+    }
+
     return (
         <div>      
         {/*                    -----------------------  Main List  -------------------------------                         */}
@@ -117,7 +129,7 @@ function FullList (props) {
                           <form className="pmClear">
                               <input type="text" id="searchQ" name="searchQ" defaultValue="is:issue is:open" />
                               <div id="cancel">
-                                  <p>X</p>
+                                  <p onClick={clearSearch}>X</p>
                               </div>
                           </form>
                       </div>
@@ -155,20 +167,50 @@ function FullList (props) {
                       <div id="authorSort">
                           <p>Author</p>
                           <img src={require ("./Icons/DropArrow.svg")} alt="drop arrow" />
+                          <div class="dropDownMenu">
+                            <ul>
+                                <li>Elon Musk</li>
+                                <li>Mark Zucker</li>
+                                <li>ClicheClient</li>
+                            </ul>
+
+                        </div>
                       </div>
                       <div id="labelSort">
                           <p>Label</p>
                           <img src={require ("./Icons/DropArrow.svg")} alt="drop arrow" />
+                          <div class="dropDownMenu">
+                            <ul>
+                                <li>Bug</li>
+                                <li>RFE</li>
+                                <li>CSS</li>
+                            </ul>
+                        </div>
                       </div>
                   </div>
                   <div id="listEnd">
                       <div id="assigneeSort">
                           <p>Assignee</p>
                           <img src={require ("./Icons/DropArrow.svg")} alt="drop arrow" />
+                          <div class="dropDownMenu">
+                            <ul>
+                                <li>Javan Friedel</li>
+                                <li>Graham Kennery</li>
+                                <li>Elon Musk</li>
+                                <li>Mark Zucker</li>
+                            </ul>
+                        </div>
                       </div>
                       <div id="mainSort">
                           <p>Sort</p>
                           <img src={require ("./Icons/DropArrow.svg")} alt="drop arrow" />
+                          <div class="dropDownMenu">
+                            <ul>
+                                <li id="recentListSort"><img alt="closed" src={require ("./Icons/Closed.svg")} /><p>Recent</p></li>
+                                <li id="likesListSort" onClick={SortCommentToggle}><img alt="closed" src={require ("./Icons/Closed.svg")} />Comments</li>
+                                <li id="commentsListSort"><img alt= "closed" src={require ("./Icons/Closed.svg")} />Likes</li>     
+                            </ul>
+                        </div>
                       </div>
                   </div>
               </div>
