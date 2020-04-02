@@ -61,32 +61,4 @@ class PinnedCards extends React.Component {
       )
     }
 }
-class PinnedLoading extends React.Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            render: false
-        }
-    }
-
-    componentDidMount() {
-        setTimeout(function() { //Start the timer
-            this.setState({render: true}) //After 1 second, set render to true
-    }.bind(this), 1000)
-}
-
-    render(){
-        
-        if(this.state.render){
-            return (
-                <PinnedCards />
-            )
-        }  
-
-        return (
-            <div></div>
-        )
-    }
-}
-
-export default PinnedLoading;
+export default PinnedCards;

@@ -1,71 +1,10 @@
-import React from 'react';
+import React from 'react'
 
- class SummaryList extends React.Component{  
+class SummaryList extends React.Component{  
     render(){
 
     function hideSummary(){
         document.getElementById("summary").style.display = "none"
-    }
-
-    function sortSumRecent() {
-        document.getElementById("recent").style.backgroundColor = "#0378DF";
-        document.getElementById("likes").style.backgroundColor = "#dbdfe5";
-        document.getElementById("comments").style.backgroundColor = "#dbdfe5";
-
-    }
-
-    function sortSumLikes() {
-        document.getElementById("likes").style.backgroundColor = "#0378DF";
-        document.getElementById("recent").style.backgroundColor = "#dbdfe5";
-        document.getElementById("comments").style.backgroundColor = "#dbdfe5";
-
-    }
-
-    function sortSumComments() {
-        document.getElementById("comments").style.backgroundColor = "#0378DF";
-        document.getElementById("recent").style.backgroundColor = "#dbdfe5";
-        document.getElementById("likes").style.backgroundColor = "#dbdfe5";
-
-    }
-
-    function sortRangeDay() {
-        document.getElementById("day").style.backgroundColor = "#0378DF";
-        document.getElementById("week").style.backgroundColor = "#dbdfe5";
-        document.getElementById("month").style.backgroundColor = "#dbdfe5";
-        document.getElementById("year").style.backgroundColor = "#dbdfe5";
-        document.getElementById("all").style.backgroundColor = "#dbdfe5";
-    }
-
-    function sortRangeWeek() {
-        document.getElementById("day").style.backgroundColor = "#dbdfe5";
-        document.getElementById("week").style.backgroundColor = "#0378DF";
-        document.getElementById("month").style.backgroundColor = "#dbdfe5";
-        document.getElementById("year").style.backgroundColor = "#dbdfe5";
-        document.getElementById("all").style.backgroundColor = "#dbdfe5";
-    }
-
-    function sortRangeMonth() {
-        document.getElementById("day").style.backgroundColor = "#dbdfe5";
-        document.getElementById("week").style.backgroundColor = "#dbdfe5";
-        document.getElementById("month").style.backgroundColor = "#0378DF";
-        document.getElementById("year").style.backgroundColor = "#dbdfe5";
-        document.getElementById("all").style.backgroundColor = "#dbdfe5";
-    }
-
-    function sortRangeYear() {
-        document.getElementById("day").style.backgroundColor = "#dbdfe5";
-        document.getElementById("week").style.backgroundColor = "#dbdfe5";
-        document.getElementById("month").style.backgroundColor = "#dbdfe5";
-        document.getElementById("year").style.backgroundColor = "#0378DF";
-        document.getElementById("all").style.backgroundColor = "#dbdfe5";
-    }
-
-    function sortRangeAll() {
-        document.getElementById("day").style.backgroundColor = "#dbdfe5";
-        document.getElementById("week").style.backgroundColor = "#dbdfe5";
-        document.getElementById("month").style.backgroundColor = "#dbdfe5";
-        document.getElementById("year").style.backgroundColor = "#dbdfe5";
-        document.getElementById("all").style.backgroundColor = "#0378DF";
     }
     
     return (
@@ -92,19 +31,19 @@ import React from 'react';
                         <div>
                             <div id="sortContain" className="flex-centre">
                                 <span className="title">Sort:</span>
-                                <p className="title" id="likes" onClick={sortSumLikes}>Likes</p>
-                                <p className="title" id="recent" onClick={sortSumRecent}>Recent</p>
-                                <p className="title" id="comments" onClick={sortSumComments}>Comments</p>
+                                <p className="title" id="likes">Likes</p>
+                                <p className="title" id="recent">Recent</p>
+                                <p className="title" id="comments">Comments</p>
                             </div>
                         </div>
                         <div>
                             <div className="rangeContain">
                                 <span className="title">Range:</span>
-                                <p className="title" id="day" onClick={sortRangeDay}>1D</p>
-                                <p className="title" id="week" onClick={sortRangeWeek}>1W</p>
-                                <p className="title" id="month" onClick={sortRangeMonth}>1M</p>
-                                <p className="title" id="year" onClick={sortRangeYear}>1Y</p>
-                                <p className="title" id="all" onClick={sortRangeAll}>ALL</p>
+                                <p className="title" id="day">1D</p>
+                                <p className="title" id="week">1W</p>
+                                <p className="title" id="month">1M</p>
+                                <p className="title" id="year">1Y</p>
+                                <p className="title" id="all">ALL</p>
                             </div>
                         </div>
                     </div>
@@ -180,34 +119,4 @@ import React from 'react';
     }
 }
 
-class SumLoading extends React.Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            render: false
-        }
-    }
-
-    componentDidMount() {
-        setTimeout(function() { //Start the timer
-            this.setState({render: true}) //After 1 second, set render to true
-    }.bind(this), 500)
-}
-
-    render(){
-        
-        if(this.state.render){
-            return (
-                <SummaryList />
-            )
-        }  
-
-        return (
-            <div></div>
-        )
-    }
-}
-
-export default SumLoading;
-
-
+export default SummaryList;

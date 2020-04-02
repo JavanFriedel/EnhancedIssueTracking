@@ -95,17 +95,11 @@ h1 {
 
 }
 
+.section {}
 
 div {
     font-size: 14px;
-    animation: fadeIn ease .75s;
 }
-
-@keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
-}
-
 
 /* ---------------------- List View Elements ------------------ */
 
@@ -480,7 +474,7 @@ select {
     line-height: 45px;
     font-size: 16px;
     background-color: #F9FAFB;
-    background-image: url(Icons/Magnify.svg);
+    /* background-image: url(Icons/Magnify.svg); */
     background-repeat: no-repeat;
     background-size: 15px 15px;
     background-position: 10px 50%;
@@ -1472,26 +1466,3 @@ border: 2px solid red;
 cursor: pointer;
 }
 
-#myProgress {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: white;
-    border: 1px solid grey;
-  }
-  
-#myBar {
-    width: 1%;
-    height: 4px;
-    background-color: var(--color6);
-    animation: fakeProgress 2s ease;
-    opacity: 75%;
-  }
-
-  @keyframes fakeProgress {
-    0% {width: 1%;}
-    40% {width:50%;}
-    60% {width: 60%;}
-    100% {width: 99%;}
-  }
