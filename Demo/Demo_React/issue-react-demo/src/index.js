@@ -5,7 +5,6 @@ import './styles.css';
 //  Import sections of document
 import SummaryList from './summary';
 import PinnedCards from './pinned.js';
-import IssueList from './issueList';
 import Loading from './issueList';
 
 

@@ -48,7 +48,7 @@ class PinnedCards extends React.Component {
                           <p>#1 by Bob on Jan 7</p>
                       </div>
                       <div className="cardStatus"><img src={require ("./Icons/StatusOpen.svg")} alt="Status Closed" />
-                          <p>Closed</p> <img src={require ("./Icons/CommentBox.svg")} alt="Status Closed" />
+                          <p>Open</p> <img src={require ("./Icons/CommentBox.svg")} alt="Status Closed" />
                           <p>2</p><img src={require ("./Icons/UpArrow.svg")} alt="Status Closed" />
                           <p>1200</p>
                       </div>
